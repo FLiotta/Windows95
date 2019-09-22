@@ -7,10 +7,17 @@
 
 .icon {
 	position: relative;		
-	width: 40px;
-	height: 40px;	
+	width: 35px;
+	height: 35px;	
 	margin-left: 5px;
-	top: 5px;
-	background-image: url('https://i.imgur.com/PfWojZe.png');
-	background-size: contain;
+
+	&--notepad {
+		background-image: url('/assets/notepad.png');
+		background-size: contain;
+	}
+
+	&--folder {
+		background-image: url('/assets/folder.png');
+		background-size: contain;
+	}
 }

@@ -26,6 +26,43 @@ $dark-primary: #8B8989;
 			p {
 				margin: 0px 5px;
 			}
+
+			&__button {
+				width: 20px;
+				height: 20px;
+				margin-top: 3px;
+				margin-left: 5px;
+				color: black;
+				font-size: smaller;
+				text-align: center;
+				background-color: $primary;
+				cursor: pointer;
+				border: 2px solid;
+				border-color: $light-primary $dark-primary $dark-primary $light-primary;
+			}
 		}
+	}
+
+	&__options {
+		width: 100%;
+	    height: 20px;
+	    padding: 1px 9px;
+	    font-size: small;
+
+	    span {
+	    	margin-top: 2px;
+	    	margin-right: 10px;
+	    	cursor: pointer;
+
+	    	&:hover {
+	    		background-color: $light-primary;
+	    		border-bottom: 1px solid $dark-primary;
+	    	}
+	    }
+	}
+
+	&__body {
+		width: 100%;
+		height: 395px;
 	}
 }

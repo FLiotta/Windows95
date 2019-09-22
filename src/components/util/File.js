@@ -1,18 +1,31 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { openWindow } from '../../actions/window';
 
 class File extends Component {
 	constructor(props){
 		super(props);
+
+		this.openWindow = this.openWindow.bind(this);
+	}
+
+	openWindow() {
+		console.log(this.props)
+		this.props.openWindow(200,50, this.props.type, this.props.fileName);
 	}
 
 	render(){
 		return (
-			<div className="file">
-				<div className="icon"></div>
-				<small>Javascript</small>
+			<div className="file text-center" onClick={this.openWindow}>
+				<div className={'icon icon--' + this.props.type}></div>
+				<small>{this.props.fileName}</small>
 			</div>			
 		)
 	}
 }
 
-export default File;
+const dispatchToProps = dispatch => ({
+	openWindow: (x,y,type, fileName) => dispatch(openWindow(x,y,type, fileName))
+})
+
+export default connect(undefined, dispatchToProps)(File);
