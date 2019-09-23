@@ -2,16 +2,17 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {closeWindow} from '../../actions/window';
 import Notepad from '../Notepad';
+import Desktop from '../Desktop';
 
 class Window extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			x: props.x,
-			y: props.y
+			x: props.left,
+			y: props.top
 		}
 
-		console.log(this.props)
+		console.log(this.state)
 		this.windowRef = React.createRef();		
 		this.drag = this.drag.bind(this);
 		this.onMouseDown = this.onMouseDown.bind(this);
@@ -46,20 +47,21 @@ class Window extends Component {
 					onMouseDown={this.onMouseDown}
 					onMouseUp={this.onMouseUp}>
 					<div className="title">
-						<p>
+						<div className={"window__head__icon icon--" + this.props.window}></div>
+						<p className="ml-1">
 						{this.props.title}
 						{this.props.window == 'notepad' && <span>.txt</span>}
 						</p>
 					</div>
 					<div className="window__head__actions">
 						<div className="window__head__actions__button">
-							_
+							<span>_</span>
 						</div>					
 						<div className="window__head__actions__button">
-							□
+							<span>□</span>
 						</div>					
 						<div className="window__head__actions__button" onClick={this.closeWindow}>
-							X
+							<span>X</span>
 						</div>					
 					</div>
 				</div>
