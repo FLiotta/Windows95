@@ -1,3 +1,10 @@
+$primary: #BDBDBD;
+$secondary: #000084;
+$light-primary: #E6E6E6;
+$dark-primary: #8B8989;
+
+
 @import './Desktop.scss';
 @import './Window.scss';
 @import './File.scss';
+@import './Taskbar.scss';

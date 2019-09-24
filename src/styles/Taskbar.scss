@@ -1,0 +1,40 @@
+.taskbar {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 30px;
+	background-color: $primary;
+	border-top: 2px solid white;
+	display: flex;
+	justify-content: space-between;
+
+	&__start {
+		display: flex;
+		justify-content: space-evenly;
+		width: 80px;
+		height: 95%;
+		background-color: $primary;
+		border: 1px outset white;
+		box-shadow: 1px 1px black;
+		cursor: pointer;
+
+		&__icon {
+			background-image: url('/assets/95.png');
+			background-size: cover;
+			width: 20px;
+			height: 20px;
+			position: relative;
+			top: 3px;
+		}
+	}
+
+	&__clock {
+		width: 80px;
+		height: 95%;
+		text-align: center;
+		background-color: $primary;
+		border: 1px inset $primary;
+		box-shadow: 1px 1px black;
+		margin-right: 2px;
+	}
+}
