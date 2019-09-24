@@ -13,7 +13,7 @@ class InternetExplorer extends Component {
 
 	searchUrl(e){
 		e.preventDefault();
-		const url = normalizeUrl(e.target.url.value);
+		const url = normalizeUrl(e.target.url.value, {forceHttps: true});
 		this.setState({url});
 	}
 
