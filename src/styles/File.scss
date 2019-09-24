@@ -3,10 +3,15 @@
 	max-height: 40px;
 	margin: 35px 10px;
 	color: white;
+	cursor: pointer;
 
 	small {
 		line-height: 14px;
 		display: inline-table;
+		-webkit-user-select: none; 
+		-moz-user-select: none; 
+		-ms-user-select: none; 
+		user-select: none; 
 	}
 }
 
