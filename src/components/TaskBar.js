@@ -4,6 +4,12 @@ class TaskBar extends Component {
 
 	constructor(props){
 		super(props);
+
+		let date = new Date();
+
+		this.state = {
+			hour: `${date.getHours()}:${date.getMinutes()}`
+		}
 	}
 
 	render(){
@@ -14,7 +20,7 @@ class TaskBar extends Component {
 					<p>Start</p>
 				</div>
 				<div className="taskbar__clock">
-					<p>23:03</p>
+					<p>{this.state.hour}</p>
 				</div>
 
 			</div>
