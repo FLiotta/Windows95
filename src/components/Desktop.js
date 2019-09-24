@@ -14,7 +14,7 @@ class Desktop extends Component {
 		return (
 
 			<div className="desktop">
-				<File type='folder' fileName='Homework' />
+				<File type='ie' fileName='Internet Explorer' />
 				<File type='folder' fileName='Projects' />
 				<File type='folder' fileName='AOE 2' />
 				<File type='notepad' fileName='Catullus' />

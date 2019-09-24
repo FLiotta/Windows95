@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {closeWindow} from '../../actions/window';
 import Notepad from '../Notepad';
-import Desktop from '../Desktop';
-
+import InternetExplorer from '../InternetExplorer';
 class Window extends Component {
 	constructor(props) {
 		super(props);
@@ -73,7 +72,8 @@ class Window extends Component {
 				</div>
 				<div className="window__body">
 					{this.props.window == 'notepad' && <Notepad />}
-					{this.props.window == 'folder' && <p>this is just an empty window</p>}
+					{this.props.window == 'ie' && <InternetExplorer />}
+					{this.props.window == 'folder' && <p>this is just an empty folder</p>}
 				</div>
 			</div>
 		)

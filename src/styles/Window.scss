@@ -53,6 +53,11 @@
 					font-weight: 800;
 				}
 			}
+
+			&__button:active {
+				box-shadow: 1px 1px inset black;
+				border: 1px inset;
+			}
 		}
 	}
 

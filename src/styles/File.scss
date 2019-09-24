@@ -3,6 +3,11 @@
 	max-height: 40px;
 	margin: 35px 10px;
 	color: white;
+
+	small {
+		line-height: 14px;
+		display: inline-table;
+	}
 }
 
 .icon {
@@ -18,6 +23,11 @@
 
 	&--folder {
 		background-image: url('/assets/folder.png');
+		background-size: contain;
+	}
+
+	&--ie {
+		background-image: url('/assets/ie.png');
 		background-size: contain;
 	}
 }

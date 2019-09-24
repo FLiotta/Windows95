@@ -28,13 +28,18 @@
 		}
 	}
 
+	&__start:active {
+		box-shadow: 1px 1px inset black;
+		border: 1px inset white;
+	}
+
 	&__clock {
 		width: 80px;
 		height: 95%;
 		text-align: center;
 		background-color: $primary;
 		border: 1px inset $primary;
-		box-shadow: 1px 1px black;
+		box-shadow: 1px 1px inset black;
 		margin-right: 2px;
 	}
 }

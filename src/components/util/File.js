@@ -16,7 +16,7 @@ class File extends Component {
 
 	render(){
 		return (
-			<div className="file text-center" onClick={this.openWindow}>
+			<div className="file text-center" onDoubleClick={this.openWindow}>
 				<div className={'icon icon--' + this.props.type}></div>
 				<small>{this.props.fileName}</small>
 			</div>			
