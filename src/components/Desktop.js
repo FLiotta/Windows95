@@ -15,10 +15,10 @@ class Desktop extends Component {
 
 			<div className="desktop">
 				<File type='ie' fileName='Internet Explorer' />
-				<File type='folder' fileName='Projects' />
-				<File type='folder' fileName='AOE 2' />
+				<File type='folder' fileName='Resources' />
 				<File type='notepad' fileName='Catullus' />
 				<File type='notepad' fileName='Todo' />
+				<File type='github' fileName='Repository' />
 				{this.props.windows.map(window => <Window key={window.id} {...window} />)}
 				<TaskBar />
 			</div>

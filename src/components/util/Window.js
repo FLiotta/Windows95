@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {closeWindow} from '../../actions/window';
 import Notepad from '../Notepad';
 import InternetExplorer from '../InternetExplorer';
+import Resources from '../folders/Resources';
+import File from './File';
 class Window extends Component {
 	constructor(props) {
 		super(props);
@@ -17,6 +19,7 @@ class Window extends Component {
 		this.onMouseDown = this.onMouseDown.bind(this);
 		this.onMouseUp = this.onMouseUp.bind(this);
 		this.closeWindow = this.closeWindow.bind(this);
+		this.renderWindow = this.renderWindow.bind(this);
 	}
 
 	onMouseDown(e) {
@@ -36,6 +39,20 @@ class Window extends Component {
 	closeWindow() {
 		this.props.closeWindow(this.props.id)
 	}
+
+	renderWindow() {
+		switch(this.props.window) {
+			case 'notepad':
+				return <Notepad />
+			case 'ie':
+				return <InternetExplorer />
+			case 'folder':
+				return <Resources />
+			default:
+				return null;
+		}
+	}
+
 	render(){
 		return (
 			<div className="window" 
@@ -53,12 +70,6 @@ class Window extends Component {
 						</p>
 					</div>
 					<div className="window__head__actions">
-						<div className="window__head__actions__button">
-							<span>_</span>
-						</div>					
-						<div className="window__head__actions__button">
-							<span>□</span>
-						</div>					
 						<div className="window__head__actions__button" onClick={this.closeWindow}>
 							<span>X</span>
 						</div>					
@@ -71,9 +82,7 @@ class Window extends Component {
 					<span>Help</span>
 				</div>
 				<div className="window__body">
-					{this.props.window == 'notepad' && <Notepad />}
-					{this.props.window == 'ie' && <InternetExplorer />}
-					{this.props.window == 'folder' && <p>this is just an empty folder</p>}
+					{this.renderWindow()}
 				</div>
 			</div>
 		)

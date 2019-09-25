@@ -10,13 +10,14 @@ class File extends Component {
 	}
 
 	openWindow() {
-		console.log(this.props)
+		if(this.props.type == 'github')
+			return window.open('https://github.com/FLiotta/ReactW95');
 		this.props.openWindow(200,50, this.props.type, this.props.fileName);
 	}
 
 	render(){
 		return (
-			<div className="file text-center" onDoubleClick={this.openWindow}>
+			<div className="file" onDoubleClick={this.openWindow}>
 				<div className={'icon icon--' + this.props.type}></div>
 				<small>{this.props.fileName}</small>
 			</div>			

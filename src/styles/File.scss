@@ -1,17 +1,21 @@
 .file {
-	max-width: 40px;
-	max-height: 40px;
-	margin: 35px 10px;
-	color: white;
-	cursor: pointer;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    cursor: pointer;
 
 	small {
 		line-height: 14px;
-		display: inline-table;
-		-webkit-user-select: none; 
-		-moz-user-select: none; 
-		-ms-user-select: none; 
-		user-select: none; 
+	    max-width: 50%;
+	    display: inline-table;
+	    -webkit-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	    color: white;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
 	}
 }
 
@@ -33,6 +37,11 @@
 
 	&--ie {
 		background-image: url('/assets/ie.png');
+		background-size: contain;
+	}
+
+	&--github {
+		background-image: url('https://icon-library.net/images/github-icon-png/github-icon-png-29.jpg');
 		background-size: contain;
 	}
 }

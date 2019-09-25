@@ -22,7 +22,6 @@ class TaskBar extends Component {
 				<div className="taskbar__clock">
 					<p>{this.state.hour}</p>
 				</div>
-
 			</div>
 		)
 	}
