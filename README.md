@@ -14,4 +14,4 @@ yarn run bundle
 ```
 
 ### Demo
-windows95react.netlify.com
+https://windows95react.netlify.com
