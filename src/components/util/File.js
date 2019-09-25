@@ -11,7 +11,7 @@ class File extends Component {
 
 	openWindow() {
 		if(this.props.type == 'github')
-			return window.open('https://github.com/FLiotta/ReactW95');
+			return window.open('https://github.com/FLiotta/Windows95');
 		this.props.openWindow(200,50, this.props.type, this.props.fileName);
 	}
 
