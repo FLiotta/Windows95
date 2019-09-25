@@ -7,8 +7,6 @@ import Desktop from './components/Desktop';
 
 let store = configStore();
 
-console.log(store.getState());
-
 ReactDOM.render(
 	<Provider store={store}>
 		<Desktop />
